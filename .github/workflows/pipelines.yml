@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
@@ -20,14 +20,32 @@ jobs:
     - name: Create Virtual Environment
       run: python -m venv venv
 
-    - name: Activate Virtual Environment and Install Dependencies
+    - name: Activate Virtual Environment
+      run: source venv/bin/activate
+
+    - name: Install pytest
       run: |
-        .\venv\Scripts\activate
-        pip install pytest selenium faker pytest-html
+        source venv/bin/activate
+        pip install pytest
+
+    - name: Install selenium
+      run: |
+        source venv/bin/activate
+        pip install selenium
+
+    - name: Install faker
+      run: |
+        source venv/bin/activate
+        pip install faker
+
+    - name: Install pytest-html
+      run: |
+        source venv/bin/activate
+        pip install pytest-html
 
     - name: Generate HTML Report
       run: |
-        .\venv\Scripts\activate
+        source venv/bin/activate
         pytest -v --html=report.html \
                 --self-contained-html \
                 --capture=no \
