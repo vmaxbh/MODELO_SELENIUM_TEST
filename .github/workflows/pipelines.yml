@@ -46,7 +46,7 @@ jobs:
     - name: Generate HTML Report
       run: |
         source venv/bin/activate
-        pytest -v --html=report.html \
+        pytest -v --html=report.html --self-contained-html --capture=no --verbose --showlocals --durations=0 \
                 --self-contained-html \
                 --capture=no \
                 --verbose \
