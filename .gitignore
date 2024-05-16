@@ -1,3 +1,2 @@
 # Ignora as pastas que terminam com "report"
 **/report/
-**/commands/
