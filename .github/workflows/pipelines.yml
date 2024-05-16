@@ -1,0 +1,42 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: windows-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Create Virtual Environment
+      run: python -m venv venv
+
+    - name: Activate Virtual Environment and Install Dependencies
+      run: |
+        .\venv\Scripts\activate
+        pip install pytest selenium faker pytest-html
+
+    - name: Generate HTML Report
+      run: |
+        .\venv\Scripts\activate
+        pytest -v --html=report.html \
+                --self-contained-html \
+                --capture=no \
+                --verbose \
+                --showlocals \
+                --durations=0 
+
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: TestReportsSE-Exemplo
+        path: report.html
