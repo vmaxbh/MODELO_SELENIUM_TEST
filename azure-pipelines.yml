@@ -1,0 +1,60 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: RunTests
+  displayName: 'Run Demanda Exemplo Tests'
+
+  steps:
+  - checkout: self
+
+    # Criar ambiente virtual
+  - script: |
+      python -m venv venv
+    displayName: 'Create Virtual Environment'
+
+  # Ativar ambiente virtual
+  - script: source venv/bin/activate
+    displayName: 'Activate Virtual Environment'
+
+  # Install Python
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.x'
+      addToPath: true
+
+  # Install pytest
+  - script: pip install pytest
+    displayName: 'Install pytest'
+
+  # Install selenium
+  - script: pip install selenium
+    displayName: 'Install selenium'
+
+  # Install faker
+  - script: pip install faker
+    displayName: 'Install faker'
+
+  # Install pytest-html
+  - script: pip install pytest-html
+    displayName: 'Install pytest-html'
+
+  # Generate HTML report
+  - script: |
+              pytest -v --html=report.html \
+                      --self-contained-html \
+                      --capture=no \
+                      --verbose \
+                      --showlocals \
+                      --durations=0 
+    displayName: 'Generate HTML Report'
+    
+  # Publish HTML report as artifact
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: 'report.html'
+      artifact: 'TestReportsSE-Exemplo'
+      publishLocation: 'pipeline'
