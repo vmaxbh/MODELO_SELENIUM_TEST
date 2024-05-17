@@ -1,4 +1,5 @@
 import pytest
+pytest.main("--capture")
 
 def pytest_html_report_title(report):
     report.title = "REPORT TESTES 'EXEMPLO'"
