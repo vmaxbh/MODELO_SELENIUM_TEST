@@ -41,7 +41,7 @@ jobs:
     - name: Install pytest-html
       run: |
         source venv/bin/activate
-        pip install pytest-html
+        pip install pytest selenium faker pytest-html
 
     - name: Generate HTML Report
       run: |
