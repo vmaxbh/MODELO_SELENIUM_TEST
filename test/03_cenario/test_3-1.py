@@ -1,8 +1,3 @@
-import pytest
-
-# Adicione a opção --capture ao pytest
-pytest.main("--capture")
-
 
 def test_3_1_igualdade_13():
     print('1º passo do teste')
