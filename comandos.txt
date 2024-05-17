@@ -7,3 +7,6 @@ pytest test/01_cenario/ -v --html=report.html
 pytest test/02_cenario/ -v --html=report.html
 pytest test/03_cenario/ -v --html=report.html
 pytest test/04_login_Saucedemo/ -v --html=report.html
+
+
+qualquer coisa
