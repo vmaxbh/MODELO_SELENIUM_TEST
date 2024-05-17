@@ -58,4 +58,4 @@ jobs:
       if: success() || failure()
       with:
         name: TestReportsSE-Exemplo
-        path: .github/artefacts/report.html
+        path: report.html
