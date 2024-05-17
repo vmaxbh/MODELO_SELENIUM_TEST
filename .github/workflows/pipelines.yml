@@ -41,14 +41,19 @@ jobs:
     - name: Install pytest-html
       run: |
         source venv/bin/activate
-        pip install pytest selenium faker pytest-html
+        pip install pytest-html
+
+    - name: List Installed Packages
+      run: |
+        source venv/bin/activate
+        pip freeze     
 
     - name: Generate HTML Report
       run: |
         source venv/bin/activate
         pytest -v --html=report.html \
                   --self-contained-html \
-                  --capture=fd \
+                  --capture=log \
                   --verbose \
                   --showlocals \
                   --durations=0 
