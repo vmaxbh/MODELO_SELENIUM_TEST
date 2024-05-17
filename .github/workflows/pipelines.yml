@@ -48,7 +48,7 @@ jobs:
         source venv/bin/activate
         pytest -v --html=report.html \
                   --self-contained-html \
-                  --capture=tee-sys \
+                  --capture=fd \
                   --verbose \
                   --showlocals \
                   --durations=0 
