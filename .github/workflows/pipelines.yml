@@ -46,13 +46,12 @@ jobs:
     - name: Generate HTML Report
       run: |
         source venv/bin/activate
-        mkdir -p.github/artefacts  # Cria a pasta.github/artefacts se não existir
         pytest -v --html=.github/artefacts/report.html \
                 --self-contained-html \
                 --capture=no \
                 --verbose \
                 --showlocals \
-                --durations=0 
+                --durations=0
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
