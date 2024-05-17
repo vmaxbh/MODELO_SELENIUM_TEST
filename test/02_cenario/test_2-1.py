@@ -1,7 +1,3 @@
-import pytest
-
-# Adicione a opção --capture ao pytest
-pytest.main("--capture")
 
 
 def test_2_1_igualdade_10():
