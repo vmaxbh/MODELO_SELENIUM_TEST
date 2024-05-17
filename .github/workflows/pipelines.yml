@@ -46,8 +46,12 @@ jobs:
     - name: Generate HTML Report
       run: |
         source venv/bin/activate
-        pytest -v --html=report.html --self-contained-html --verbose --showlocals --durations=0 --capture=all > report.html 2>&1
-
+        pytest -v --html=report.html \
+                  --self-contained-html \
+                  --capture=log \
+                  --verbose \
+                  --showlocals \
+                  --durations=0 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
       if: success() || failure()
