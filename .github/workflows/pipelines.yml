@@ -20,45 +20,23 @@ jobs:
     - name: Create Virtual Environment
       run: python -m venv venv
 
-    - name: Activate Virtual Environment
-      run: source venv/bin/activate
-
-    - name: Install pytest
+    - name: Install Dependencies
       run: |
-        source venv/bin/activate
-        pip install pytest
-
-    - name: Install selenium
-      run: |
-        source venv/bin/activate
-        pip install selenium
-
-    - name: Install faker
-      run: |
-        source venv/bin/activate
-        pip install faker
-
-    - name: Install pytest-html
-      run: |
-        source venv/bin/activate
-        pip install pytest-html
-
-    - name: List Installed Packages
-      run: |
-        source venv/bin/activate
-        pip freeze     
+        python -m pip install --upgrade pip
+        pip install pytest selenium faker pytest-html
 
     - name: Generate HTML Report
       run: |
-        source venv/bin/activate
         pytest -v --html=report.html \
-                  --capture=sys \
-                  --verbose \
-                  --showlocals \
-                  --durations=0 
+                --self-contained-html \
+                --capture=sys \
+                --verbose \
+                --showlocals \
+                --durations=0 
+
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
-      if: success() || failure()
+      if: always()  # Garante que o artefato seja sempre carregado, independentemente do resultado dos testes
       with:
         name: TestReportsSE-Exemplo
-        path: report.html
+        path: report.html  # Certifique-se de que o caminho esteja correto
