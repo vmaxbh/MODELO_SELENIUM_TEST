@@ -32,7 +32,8 @@ jobs:
                 --capture=sys \
                 --verbose \
                 --showlocals \
-                --durations=0 
+                --durations=0 \
+                --trace 
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
