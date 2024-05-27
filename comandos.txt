@@ -10,3 +10,5 @@ pytest test/04_login_Saucedemo/ -v --html=report.html
 
 
 qualquer coisa
+
+pytest -v --html=report.html --junitxml=test-results.xml

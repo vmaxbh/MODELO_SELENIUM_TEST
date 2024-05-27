@@ -27,7 +27,7 @@ jobs:
 
     - name: Esteira de testes e Generate Reports
       run: |
-        pytest -v --html=report.html --junitxml=test-results.xml \
+        pytest -v --html=report.html --junitxml=test-results.xml --csv=output.csv \
                 --self-contained-html \
                 --capture=sys \
                 --verbose \

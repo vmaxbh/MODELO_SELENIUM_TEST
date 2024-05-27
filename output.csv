@@ -1,0 +1,16 @@
+id,module,name,file,doc,markers,status,message,duration
+test/01_cenario/test_1-1.py::test_1_1_igualdade_1,test.01_cenario.test_1-1,test_1_1_igualdade_1,test\01_cenario\test_1-1.py,,,passed,,0.0005489000000000743
+test/01_cenario/test_1-1.py::test_1_1_igualdade_2,test.01_cenario.test_1-1,test_1_1_igualdade_2,test\01_cenario\test_1-1.py,,,passed,,0.00037670000000034065
+test/01_cenario/test_1-1.py::test_1_1_igualdade_3,test.01_cenario.test_1-1,test_1_1_igualdade_3,test\01_cenario\test_1-1.py,,,passed,,0.0003731000000000151
+test/01_cenario/test_1-2.py::test_1_2_igualdade_4,test.01_cenario.test_1-2,test_1_2_igualdade_4,..\..\..\udemy\Selenium_Modelo_Test\test\01_cenario\test_1-2.py,,,passed,,0.00044109999999975
+test/01_cenario/test_1-2.py::test_1_2_igualdade_5,test.01_cenario.test_1-2,test_1_2_igualdade_5,..\..\..\udemy\Selenium_Modelo_Test\test\01_cenario\test_1-2.py,,,passed,,0.00038849999999968077
+test/01_cenario/test_1-2.py::test_1_2_igualdade_6,test.01_cenario.test_1-2,test_1_2_igualdade_6,..\..\..\udemy\Selenium_Modelo_Test\test\01_cenario\test_1-2.py,,,passed,,0.000454699999999697
+test/01_cenario/test_1-3.py::test_1_3_igualdade_7,test.01_cenario.test_1-3,test_1_3_igualdade_7,..\..\..\udemy\Selenium_Modelo_Test\test\01_cenario\test_1-3.py,,,passed,,0.0004945000000002864
+test/01_cenario/test_1-3.py::test_1_3_igualdade_6,test.01_cenario.test_1-3,test_1_3_igualdade_6,..\..\..\udemy\Selenium_Modelo_Test\test\01_cenario\test_1-3.py,,,passed,,0.0005759999999996879
+test/02_cenario/test_2-1.py::test_2_1_igualdade_10,test.02_cenario.test_2-1,test_2_1_igualdade_10,test\02_cenario\test_2-1.py,,,passed,,0.00044319999999942183
+test/02_cenario/test_2-2.py::test_2_2_igualdade_11,test.02_cenario.test_2-2,test_2_2_igualdade_11,test\02_cenario\test_2-2.py,,,passed,,0.0004281999999999897
+test/02_cenario/test_2-3.py::test_2_3_igualdade_12,test.02_cenario.test_2-3,test_2_3_igualdade_12,test\02_cenario\test_2-3.py,,,passed,,0.0004981000000006119
+test/03_cenario/test_3-1.py::test_3_1_igualdade_13,test.03_cenario.test_3-1,test_3_1_igualdade_13,test\03_cenario\test_3-1.py,,,passed,,0.0005928000000006151
+test/03_cenario/test_3-2.py::test_3_2_igualdade_14,test.03_cenario.test_3-2,test_3_2_igualdade_14,test\03_cenario\test_3-2.py,,,passed,,0.0005827999999992173
+test/03_cenario/test_3-3.py::test_3_3_igualdade_15,test.03_cenario.test_3-3,test_3_3_igualdade_15,test\03_cenario\test_3-3.py,,,passed,,0.0004521000000003994
+test/04_login_Saucedemo/test_login_Saucedemo.py::test_loginSaucedemo,test.04_login_Saucedemo.test_login_Saucedemo,test_loginSaucedemo,test\04_login_Saucedemo\test_login_Saucedemo.py,,,passed,,5.003909999999999
