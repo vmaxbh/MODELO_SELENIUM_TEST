@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest selenium faker pytest-html
 
-    - name: Generate HTML Report
+    - name: Esteira de testes e Generate Reports
       run: |
         pytest -v --html=report.html --junitxml=test-results.xml \
                 --self-contained-html \
@@ -38,12 +38,12 @@ jobs:
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: TestReportsSE-Exemplo
+        name: TestReportsSE-Exemplo_html
         path: report.html
 
     - name: Upload XML Results
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: TestResultsSE-Exemplo
+        name: TestResultsSE-Exemplo_xml
         path: test-results.xml
