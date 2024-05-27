@@ -36,7 +36,14 @@ jobs:
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
-      if: always()  # Garante que o artefato seja sempre carregado, independentemente do resultado dos testes
+      if: always()
       with:
         name: TestReportsSE-Exemplo
-        path: report.html  # Certifique-se de que o caminho esteja correto
+        path: report.html
+
+    - name: Upload XML Results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: TestResultsSE-Exemplo
+        path: test-results.xml
