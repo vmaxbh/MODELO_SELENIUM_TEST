@@ -28,12 +28,13 @@ jobs:
     - name: Generate HTML Report
       run: |
         pytest -v --html=report.html \
+        python -m pytest -v --junitxml=test-results.xml \
                 --self-contained-html \
                 --capture=sys \
                 --verbose \
                 --showlocals \
                 --durations=0 \
-                --trace 
+                
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
