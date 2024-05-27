@@ -24,6 +24,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pytest selenium faker pytest-html
+        pip install pytest-csv 
 
     - name: Esteira de testes e Generate Reports
       run: |
